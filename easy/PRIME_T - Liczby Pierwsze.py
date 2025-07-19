@@ -8,8 +8,10 @@ def prime_numer(number: int) -> str:
             return "NIE"
         x += 1
     return "TAK"
-
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    print(prime_numer(n))
+def main() -> None:
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        print(prime_numer(n))
+if __name__ == "__main__":
+    main()
