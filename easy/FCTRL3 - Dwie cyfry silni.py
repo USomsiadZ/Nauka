@@ -24,13 +24,12 @@ def dec_and_digit(number: int) -> tuple[int,int]:
 def main() -> None:
     t = int(input())
     for _ in range(t):
-        n = int(input())  
+        n = int(input())
         n = n or 1
         if n >= 10:
             print(0,0) 
         else:
-            result = dec_and_digit(factorial(n))
-            print(f"{result[0]} {result[1]}")
+            print(*dec_and_digit(factorial(n)))
 
 if __name__ == "__main__":
     main()
