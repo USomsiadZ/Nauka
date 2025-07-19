@@ -12,17 +12,14 @@
 
 def factorial(number: int) -> int:
     result = number
-    while number > 1:
-        number -= 1
-        result *= number
-        result %= 100
+    for i in range(2,number):
+        result = result * i % 100
     return result
 
 def dec_and_digit(number: int) -> tuple[int,int]:
-    number %= 100
-    digit = number // 10
-    dec = number % 10
-    return (digit,dec)
+    digit = number % 10
+    dec = number % 100 // 10
+    return (dec,digit)
 
 def main() -> None:
     t = int(input())
